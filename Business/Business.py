@@ -49,8 +49,9 @@ class Business:
         customers = S.CustomerDB.FetchByName(name)
         for c in customers:
             print(c.getCustomer())
+            return c
         print('-----------------------------------------')
-        return customers
+        # return customers
 
     def InsertCustomer(name,phone):
         print('-----------------------------------------')
