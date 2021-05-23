@@ -5,5 +5,14 @@ class Customer:
         self.phone = phone
 
     def getCustomer(self):
-        customerData = 'ID',self.id,'Name',self.name,'Phone',self.phone
-        return customerData
+        customerData = ' ID: ',str(self.id),' ,Name: ',str(self.name),' ,Phone: ',str(self.phone)
+        return ''.join(customerData)
+
+    def getId(self):
+        return str(self.id)
+
+    def getName(self):
+        return str(self.name)
+
+    def getPhone(self):
+        return str(self.phone)
