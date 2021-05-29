@@ -35,14 +35,16 @@ class Business:
         return phones
 
     def CustomerID(id):
-        print('-----------------------------------------')
-        if int(id)-1<len(S.CustomerDB.FetchAll()):
-            customers = S.CustomerDB.FetchAll()
-            print(customers[int(id)-1].getCustomer())
-            return customers[int(id)-1]
-        else:
-            print('Error in ID')
-        print('-----------------------------------------')
+        # print('-----------------------------------------')
+        # if int(id)-1<len(S.CustomerDB.FetchAll()):
+        customers = S.CustomerDB.FetchAll()
+        # print(customers[int(id)-1].getCustomer())
+        for customer in customers:
+            if int(customer.getId())== int(id):
+                return customer
+        # else:
+        #     print('Error in ID')
+        # print('-----------------------------------------')
 
     def CustomerName(name):
         print('-----------------------------------------')
